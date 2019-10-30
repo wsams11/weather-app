@@ -1,0 +1,31 @@
+.tile{
+      margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .tile .box{
+    /* opacity: 0.5; */
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+  }
+  .heroTitle{
+    color: white;
+    font-size: 50px;
+  }
+  .title{
+    color: white;
+    font-size: 24px;
+  }
+ body{
+  font-family: 'Comfortaa', cursive;
+font-size: 18px;
+ }
+ .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}

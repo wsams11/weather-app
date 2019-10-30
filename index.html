@@ -5,57 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather</title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Muli|Noto+Sans|Quicksand|Roboto&display=swap"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/551dff928d.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
-    <div class="container">
-        <div class="jumbotron text-center">
-            <h1 class="display-4">WEATHER DASHBOARD</h1>
+<body background="assets/images/Webp.net-resizeimage (4).jpg">
+    <section class="hero has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <p class="heroTitle">
+                    Weather Dashboard
+                </p>
+            </div>
         </div>
+    </section>
 
-        <div class="dashboard">
-            <div class="row">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Search for a city: </h5>
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="inputCity"></label>
-                                    <input type="text" class="form-control" id="inputCity">
-                                    <span id="error"></span>
-                                </div>
-                                <button id="submitWeather" type="submit" class="btn btn-primary"><i
-                                        class="fa fa-search"></i></button>
-                            </div>
-                        </form>
+    <div class="container">
+
+        <div class="tile is-ancestor">
+
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <div class="field">
+                        <label class="label"></label>
+                        <div class="control">
+                            <input class="input" id="inputCity" type="text" placeholder="Text input">
+                            <button id="submitWeather" type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="card">
-                        <h1 class="card-title" id="city"></h1>
-                        <p class="card-text" id="temp"></p>
-                        <p class="card-text" id="humidity"></p>
-                        <p class="card-text" id="windSpeed"></p>
-                        <p class="card-text" id="uvIndex"></p>
-                    </div>
-                </div>
+            </div>
 
+            <div class="tile is-10 is-vertical is-parent">
+                <div class="tile is-child box">
+                    <h2 class="title">Today's Forcast</h2>
+                    <p class="card-title" id="city"></p>
+                    <p class="card-text" id="temp"></p>
+                    <p class="card-text" id="humidity"></p>
+                    <p class="card-text" id="windSpeed"></p>
+                    <p class="card-text" id="uvIndex"></p>
+
+                </div>
+                <div class="tile is-child box">
+                    <p class="title">5 Day Forecast</p>
+                </div>
             </div>
         </div>
     </div>
 
 
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/app.js"></script>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Weather Dashboard created by William Sams III
+            </p>
+        </div>
+    </footer>
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
 </body>
 
 </html>

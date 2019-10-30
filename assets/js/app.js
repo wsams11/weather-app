@@ -1,37 +1,26 @@
-
-
 $("#submitWeather").on("click", function (e) {
-    e.preventDefault()
-    console.log("i clicked the button")
+    e.preventDefault();
     var city = $("#inputCity").val();
 
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=9acf091dc63eaffd665c2bc101fd67c2";
-    
- 
-    
-    
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&&units=imperial" + "&appid=9acf091dc63eaffd665c2bc101fd67c2";
 
     $.ajax({
         url: queryURL,
         method: "GET",
         success: function (response) {
             console.log(response);
-            $("#city").html(response.name);
-            $("#temp").html(response.main.temp);
-            $("#humidity").html(response.main.humidity);
-            $("#windSpeed").html(response.wind.speed);
-           getUV(response.coord.lat, response.coord.lon);
-           fiveDay(city);
+            $("#city").html(response.name + " " + moment().format("dddd, MMMM Do"));
+            $("#temp").html("Tempature: " + response.main.temp + "&#8457");
+            $("#humidity").html("Humidity: " + response.main.humidity + "%");
+            $("#windSpeed").html("Wind Speed: " + response.wind.speed + " MPH");
+        //    getUV("UV Index: " + response.coord.lat, response.coord.lon);
+        //    fiveDay(city);
         }
     })
+});
 
-  
-
-    
-    
-
-})
-
+var lat = (response.coord.lat);
+var lon = (response.coord.lon);
 
 function getUV(lat,lon){
 
@@ -79,57 +68,3 @@ function fiveDay(city){
     })
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // The below code fills in the first row of the table
-//  var city = "Tempe,az";
-//  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=b6907d289e10d714a6e88b30761fae22";
-
-//  $.ajax({
-//    url: queryURL,
-//    method: "GET",
-//  }).then(function(response) {
-//    // Create a new table row element
-//    var tRow = $("<tr>");
-
-//    // Methods run on jQuery selectors return the selector they we run on
-//    // This is why we can create and save a reference to a td in the same statement we update its text
-//    var temp = $("<td>").text(response.main.temp);
-//    var humidity = $("<td>").text(response.main.humidity);
-//    var windSpeed = $("<td>").text(response.wind.wind.speed);
-
-//    // Append the newly created table data to the table row
-//    tRow.append(temp, humidity, windSpeed);
-//    // Append the table row to the table body
-//    $("tbody").append(tRow);
-//  });
-
