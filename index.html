@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Dashboard</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Muli|Noto+Sans|Quicksand|Roboto&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/551dff928d.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa|Muli|Noto+Sans|Quicksand|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/551dff928d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-</head>
-
-<body background="assets/images/Webp.net-resizeimage (4).jpg">
+  <body background="assets/images/Webp.net-resizeimage (4).jpg">
     <section class="hero has-text-centered">
-        <div class="hero-body">
-            <div class="container">
-                <p class="heroTitle">
-                    Weather Dashboard
-                </p>
-            </div>
+      <div class="hero-body">
+        <div class="container">
+          <p class="heroTitle">
+            Weather Dashboard
+          </p>
         </div>
+      </div>
     </section>
 
     <div class="container">
-
-        <div class="tile is-ancestor">
-
-            <div class="tile is-parent">
-                <div class="tile is-child box">
-                    <div>
-                        <label class="label"></label>
-                        <div class="control">
-                            <input class="input" id="inputCity" type="text" placeholder="Text input">
-                            <button id="submitWeather" type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-                        </div>
-                        <div class="field">
-
-                        </div>
-                    </div>
-                </div>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <div class="tile is-child box">
+            <div>
+              <label class="label"></label>
+              <div class="control">
+                <input
+                  class="input"
+                  id="inputCity"
+                  type="text"
+                  placeholder="Text input"
+                />
+                <button
+                  id="submitWeather"
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+              <div class="field"></div>
             </div>
-
-            <div class="tile is-10 is-vertical is-parent">
-                <div class="tile is-child box">
-                    <h2 class="weatherTitle">Today's Forcast</h2>
-                    <p class="card-title" id="city"></p>
-                    <p class="card-text" id="temp"></p>
-                    <p class="card-text" id="humidity"></p>
-                    <p class="card-text" id="windSpeed"></p>
-                    <p class="card-text" id="uvIndex"></p>
-
-                </div>
-                <div class="tile is-child box">
-                    <p class="weatherTitle">5 Day Forecast</p>
-                    <div class="tile" id="weatherForcast">
-                       
-                       
-                        
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="tile is-10 is-vertical is-parent">
+          <div class="tile is-child box">
+            <h2 class="weatherTitle">Today's Forcast</h2>
+            <p class="card-title" id="city"></p>
+            <p class="card-text" id="temp"></p>
+            <p class="card-text" id="humidity"></p>
+            <p class="card-text" id="windSpeed"></p>
+            <p class="card-text" id="uvIndex"></p>
+          </div>
+          <div class="tile is-child box">
+            <p class="weatherTitle">5 Day Forecast</p>
+            <div class="tile" id="weatherForcast"></div>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-centered">
+        <p>
+          <strong>Made by William Sams III</strong>
+        </p>
+      </div>
     </div>
 
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/moment.min.js"></script>
     <script src="assets/js/app.js"></script>
-
-</body>
-
+  </body>
 </html>

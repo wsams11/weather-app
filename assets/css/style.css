@@ -1,28 +1,35 @@
-.tile{
-      margin-top: 10px;
-    margin-bottom: 10px;
-
-  }
-  .tile .box{
-    background-color: rgba(0, 0, 0, .5);
-    color: white;
-  }
-  .heroTitle{
-    color: white;
-    font-size: 50px;
-  }
-  .weatherTitle{
-    color: white;
-    font-size: 30px;
-  }
- 
- body, html {
-  height: 100%;
-  font-family: 'Comfortaa', cursive;
-font-size: 18px;
+.tile {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+  clear: both;
+}
+.tile .box {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.heroTitle {
+  color: white;
+  font-size: 50px;
+}
+.weatherTitle {
+  color: white;
+  font-size: 30px;
 }
 
-.bg {
+body,
+html {
   height: 100%;
-  ba
+  font-family: "Comfortaa", cursive;
+  font-size: 18px;
+  background-color: #cccccc;
+}
+.footer{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2em;
+  font-size: small;
 }
