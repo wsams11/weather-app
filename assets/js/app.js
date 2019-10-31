@@ -46,10 +46,6 @@ function getUV(lat,lon){
 function fiveDay(city){
 
     var fiveDayQueryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=9acf091dc63eaffd665c2bc101fd67c2";
-/* <div class="tile is-child box">
-<p></p>
-</div> */
-    // create a global div in order to hold all 5 days
     $.ajax({
         
         url:fiveDayQueryURL,
