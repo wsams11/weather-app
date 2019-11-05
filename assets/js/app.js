@@ -45,7 +45,7 @@ function getUV(lat,lon){
 }
 function fiveDay(city){
 
-    var fiveDayQueryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=9acf091dc63eaffd665c2bc101fd67c2";
+    var fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=9acf091dc63eaffd665c2bc101fd67c2";
     $.ajax({
         
         url:fiveDayQueryURL,
