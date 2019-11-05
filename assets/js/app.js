@@ -32,7 +32,7 @@ function forcastIcon(){
 
 function getUV(lat,lon){
 
-    var uvIndexQueryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=9acf091dc63eaffd665c2bc101fd67c2&lat=" + lat + "&lon=" + lon;
+    var uvIndexQueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=9acf091dc63eaffd665c2bc101fd67c2&lat=" + lat + "&lon=" + lon;
     $.ajax({
         url: uvIndexQueryURL,
         method: "GET",
@@ -45,7 +45,7 @@ function getUV(lat,lon){
 }
 function fiveDay(city){
 
-    var fiveDayQueryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=9acf091dc63eaffd665c2bc101fd67c2";
+    var fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&&units=imperial" + "&appid=9acf091dc63eaffd665c2bc101fd67c2";
     $.ajax({
         
         url:fiveDayQueryURL,
@@ -68,7 +68,7 @@ function fiveDay(city){
                     forcastDate.appendTo(divTile);
                     forcastTemp.html("Temp: " + weather[i].main.temp + "&#8457");
                     forcastTemp.appendTo(divTile);
-                    forcastIcon.attr("src", "http://openweathermap.org/img/w/" + icon + ".png");
+                    forcastIcon.attr("src", "https://openweathermap.org/img/w/" + icon + ".png");
                     forcastIcon.appendTo(divTile);
                     forcastHumidity.html("Humidity: " + weather[i].main.humidity + "%");
                     forcastHumidity.appendTo(divTile);
