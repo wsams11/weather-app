@@ -1,4 +1,4 @@
-![HomePage](/weather-app/assets/images/1.png)
+![HomePage](/assets/images/1.png)
 
 # Weather Dashboard
 
@@ -23,8 +23,8 @@ I have created an app that will display useful weather information for the curre
 
 ## Screenshots
 
-![Tempe Weather](/weather-app/assets/images/1.png)
-![Flint Weather](/weather-app/assets/images/2.png)
+![Tempe Weather](/assets/images/1.png)
+![Flint Weather](/assets/images/2.png)
 
 ## Deploy Link
 
